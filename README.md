@@ -3,7 +3,7 @@ SWagLabs project
 The main Frameworks included in the project :
 
 
--Selenium Webdriver
+
 - TestNG
 -  Selenium Webdriver
 -  Listeners
