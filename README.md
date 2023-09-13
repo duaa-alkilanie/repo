@@ -1,5 +1,5 @@
 # repo
-SWagLabs project 
+SwagLabs project 
 The main Frameworks included in the project :
 
 
