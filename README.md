@@ -18,5 +18,6 @@ The main Frameworks included in the project :
 - verify add item which is the lowest price to cart
   
  - CheckoutPage:
+   
   -verify place an order with item&& make sure redirect after checkout complete
   
