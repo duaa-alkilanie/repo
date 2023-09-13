@@ -27,6 +27,14 @@ public class checkOutPage extends PageBase {
     @FindBy(xpath = "//div[@class='header_secondary_container']")
     WebElement completeCheckout;
 
+    protected static void setTextElementText(WebElement textElement , String value)
+    {
+        textElement.sendKeys(value);
+    }
+    protected static void clickButton(WebElement button)
+    {
+        button.click();
+    }
 public void clickONCheckout(){
     checkOutBtn.click();
 }

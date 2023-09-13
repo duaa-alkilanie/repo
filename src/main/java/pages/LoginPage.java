@@ -7,7 +7,7 @@ import pages.PageBase;
 
 public class LoginPage extends PageBase {
 
-//    protected WebDriver drvier ;
+
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -31,16 +31,17 @@ public class LoginPage extends PageBase {
 
     public void UserLogin(String username , String password)
     {
-//    clearText(userNameinput);
-        setTextElementText(userNameinput,username);
-        clearText(userNameinput);
-        setTextElementText(passwordinput, password);
-        clickButton(loginBtn1);
+        userNameinput.sendKeys(username);
+        passwordinput.sendKeys(password);
+        loginBtn1.click();
     }
 
-//    public void getMessageErrorForLokedOut (){
-//        getMessageError(errorMessageForLokedOut);
-//    }
+
+
+    public String  getMessageError(WebElement element){
+        String text =element.getText();
+        return  text;
+    }
 
 }
 

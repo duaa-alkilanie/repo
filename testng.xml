@@ -3,7 +3,8 @@
     <test name="test place an order">
         <classes>
             <class name="tests.LoginPageTest"/>
-
+            <class name="tests.ProductListingTest"/>
+            <class name="tests.CheckOutTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

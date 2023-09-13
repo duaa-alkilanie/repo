@@ -11,22 +11,6 @@ public class PageBase {
     {
         PageFactory.initElements(driver, this);
     }
-    protected static void setTextElementText(WebElement textElement , String value)
-    {
-        textElement.sendKeys(value);
-    }
-    protected static void clickButton(WebElement button)
-    {
-        button.click();
-    }
-    public void clearText(WebElement element)
-    {
-        element.clear();
-    }
 
-    public String  getMessageError(WebElement element){
-       String text =element.getText();
-        return  text;
-    }
 
 }

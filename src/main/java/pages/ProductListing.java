@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import pages.PageBase;
 
 public class ProductListing extends PageBase {
-    WebDriver driver;
+//    WebDriver driver;
     public ProductListing(WebDriver driver) {
         super(driver);
     }
@@ -19,8 +19,10 @@ public class ProductListing extends PageBase {
     WebElement cartIcon;
 
 
+
+
     public void selectPriceFromLowToHigh(){
-        selectElement.click();
+//        selectElement.click();
         Select dropDownicon = new Select(selectElement);
         dropDownicon.selectByValue("lohi");
     }
@@ -33,6 +35,7 @@ public class ProductListing extends PageBase {
         return itemAmount;
     }
     public void clickCartIcon(){
-        clickButton(cartIcon);
+//        clickButton(cartIcon);
+        cartIcon.click();
     }
 }

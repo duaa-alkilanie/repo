@@ -3,12 +3,10 @@ package tests;
 import data.JsonDataReader;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
 import pages.LoginPage;
 import pages.ProductListing;
 import pages.checkOutPage;
-import tests.TestBase;
 
 import java.io.IOException;
 
@@ -21,12 +19,11 @@ public class CheckOutTest extends TestBase {
     public void checkOutTheOrder() throws IOException, ParseException {
         JsonDataReader jsonReader = new JsonDataReader();
         jsonReader.JsonReader();
-        driver = new ChromeDriver();
+
         page = new LoginPage(driver);
         productList = new ProductListing(driver);
         checkout = new checkOutPage(driver);
-        driver.navigate().to("https://www.saucedemo.com");
-        driver.manage().window().maximize();
+
         page.UserLogin(jsonReader.userName, jsonReader.password);
         productList.selectPriceFromLowToHigh();
         productList.addToCart();
@@ -40,6 +37,6 @@ public class CheckOutTest extends TestBase {
         String expectedValue= "Checkout: Complete!";
         String actualValue= checkout.completeCheckOut();
         Assert.assertEquals(expectedValue,actualValue);
-        driver.quit();
+
     }
 }
