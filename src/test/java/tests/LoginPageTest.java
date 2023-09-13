@@ -14,7 +14,7 @@ import java.io.IOException;
 public class LoginPageTest extends TestBase {
 
     LoginPage page ;
-    @Test(priority = 2)
+    @Test(priority = 1)
     public void doLogin() throws IOException, ParseException {
         page = new LoginPage(driver);
         JsonDataReader jsonReader = new JsonDataReader();
@@ -23,9 +23,9 @@ public class LoginPageTest extends TestBase {
         String homePage=driver.getTitle();
         Assert.assertEquals(homePage,"Swag Labs");
         System.out.println("the first test case done");
-        driver.quit();
+//        driver.quit();
     }
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void doLoginForLockedOutUser() throws IOException, ParseException {
         JsonDataReader jsonReader = new JsonDataReader();
         jsonReader.JsonReader();
